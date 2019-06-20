@@ -1,0 +1,683 @@
+/*------------- main -------------*/ 
+
+.name {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'montserrat';
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+embed {
+    display: flex;
+    width: 100%;
+align-content: center;
+align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.212);
+    margin-bottom: 5rem;
+}
+
+/* loading screen */
+.preloader {
+    width: 100%;
+    height: 100%;
+    background: #fff url(images/loading.gif) no-repeat center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    z-index: 20000;
+}
+
+body {
+    background: black;
+    /* background: #FFC001; */
+    /* background: #F4F4F4; */
+    ;
+    /* background-image: url("images/bg7.gif"); */
+     background-size: 6%;
+     background-position: center;
+     background-repeat: repeat;
+}
+
+h1 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-family: 'montserrat alternates', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    font-size: 2rem;
+    padding: 14px;
+    color: black;
+    max-width: 15em;
+}
+
+h3 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    font-size: 2rem;
+    color: white;
+}
+
+p {
+        font-family: 'montserrat',
+        sans-serif;
+        font-weight: 400;
+        line-height: 1.6rem;
+        color: #676767;
+        font-size: 0.9em;
+        max-width: 40em;
+        padding: 1em 14px;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+}
+
+footer {
+    background: rgb(30, 30, 30);   
+    padding-bottom: 4rem;
+}
+
+/*------------- navsection -------------*/
+
+.navsection {
+    /* border: solid 1px red; */
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#navsection-projecten {
+    /* background-image: url("images/bg6.gif") !important; */
+    background-size: 6%;
+}
+
+.topsection {
+    /* border: solid 1px green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem;
+}
+
+.topsection img {
+    height: 2rem;
+    transition: 200ms;
+    z-index: 1000;
+}
+
+.logomobile img{
+    height: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+
+}
+
+.topsection img:hover {
+    transform: rotate(-18deg);
+    height: 2.5rem;
+}
+
+.middlesection {
+    justify-content: space-between;
+    display: flex;
+    
+}
+.middlesectionicons {
+    /* border: solid 1px green; */
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+}
+
+.middlesectionicons a {
+    /* border: solid 1px yellow; */
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.middlesection img {
+    height: auto;
+}
+
+#topsection {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    font-family: 'montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    border-bottom: solid 2px white;
+    padding-bottom: 10px;
+    width: 7rem;
+    text-align: right;
+    transition: 300ms;
+}
+
+#topsection:hover {
+        color: #FF4343 !important;
+         border-bottom: 2px solid #FF4343;
+             transform: rotate(-2deg);
+}
+
+/*------------- projects grid -------------*/
+
+.body-projecten {
+    background-color: rgb(255, 255, 255);
+}
+
+.body-projecten h1 {
+    color: black;
+}
+
+.body-projecten #topsection {
+    border-bottom: 2px solid #FF4343;
+    color: #FF4343;
+}
+
+.projecten {
+    text-align: center;
+    padding: 8rem 6rem 0rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.projecten_woord1 {
+    font-weight: 600;
+}
+
+.grid {
+    position: relative;
+    padding:3rem 0px;
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    /* grid-column-gap: 0.5em; */
+    /* grid-row-gap: 0.5em; */
+}
+
+.grid img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid a {
+    position: relative;
+}
+
+.project-overzicht-title {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.733);
+      color: #fff;
+      transition: opacity .2s, visibility .2s;
+      opacity: 0;
+      font-family: 'montserrat', sans-serif;
+      font-size: 2em;
+      font-weight: 500;
+      padding-left: 30px;
+}
+
+.project-overzicht-title:hover {
+    opacity: 1;
+}
+
+.span {
+    font-size: 0.5em;
+    font-weight: 300;
+    padding-left: 4px;
+}
+
+/*------------- project page content -------------*/
+
+
+.project-title {
+    font-family: 'montserrat alternates';
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url("images/bg_beeldtaal2.png");
+}
+
+#project-title-typografie {
+    background-image:url("images/typografie_bg.png");
+} 
+
+#project-title-ontwerpen1 {
+    background-image: url("images/ontwerpen_bg.png");
+}
+
+#project-title-interfacebewegen {
+    background-image: url("images/interfacebeweging_bg.png");
+}
+
+#project-title-gridenkleur {
+    background-image: url("images/gridenkleur_bg.png");
+}
+
+#project-title-webanimatie {
+    background-image: url("images/webanimatie_bg.JPG");
+}
+
+#project-title-webtypografie {
+    background-image: url("images/webtypografie_bg.jpg");
+}
+
+#project-title-ontwerpen2 {
+    background-image: url("images/projects/ontwerpen2_thumb.png");
+}
+
+#project-title-ontwerpen3 {
+    background-image: url("images/projects/ontwerpen3_thumb.png");
+}
+.overlay-image {
+        object-fit: cover;
+        display: flex;
+        margin: 0 auto;
+        width: 80% !important;
+        height: auto;
+        margin-top: -12rem !important;
+}
+
+/* .project-content img {
+    object-fit: cover;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+} */
+
+.project-content {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#project-content-typografie {
+    background: rgb(243, 237, 229);
+}
+
+.project-text {
+    padding: 100px 0px;
+}
+.project-image-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+
+}
+
+.content-image {
+    object-fit: cover;
+    display: flex;
+    margin: 0 auto;
+    width: 80% !important;
+    height: auto;
+}
+
+.ontwerpen1 {
+    width: 100%;
+}
+
+.typografieph {
+    margin-top: -5rem !important;
+    width: 100% !important;
+}
+
+#typografie_card img {
+    width: 1300px !important;
+}
+
+#ontwerpen_card img {
+    width: 100%;
+}
+
+.typografie_bg {
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+.typografie_bg p{
+    color: white;
+}
+
+.typografie_bg h2 {
+    color: #E04F2D;
+}
+
+.typografie_bg_two {
+    background: url(images/typografie_bg_stad.png);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------- content card -------------*/
+
+.contentcard {
+    margin: 5rem 0rem;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contentcard img {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.contentcard_p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4rem;
+    height: 20rem;
+    background: white;
+}
+
+.contentcard p {
+    max-width: 20rem;
+}
+
+.contentcard_p_2 p {
+    max-width: 30rem !important;
+}
+
+#contentcard_ontwerpen1 {
+    justify-content: space-around !important; 
+}
+strong {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.nomargin{
+        margin: 0rem 0rem;
+}
+
+/*------------- alinea section -------------*/
+
+.alinea_section {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem;
+
+}
+
+.alinea_section p {
+    max-width: 400px;
+}
+
+/*------------- media queries -------------*/
+
+@media only screen and (max-width: 601px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 90%;
+    }
+
+    .project-image-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .form-control {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+
+#topsection {
+    display: none;
+}
+
+.middlesection {
+    margin-bottom: 7rem;
+}
+
+.overlay-image {
+    width: 100% !important;
+    height: auto;
+    margin-top: -5rem !important;
+
+}
+}
+
+@media only screen and (min-width: 1060px) {
+
+    .button_container {
+        display: none;
+    }
+
+    .logomobile img {
+        display: none;
+    }
+}
+
+/*------------- hamburger menu -------------*/
+
+
+.button_container {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+}
+
+.button_container:hover {
+    opacity: .7;
+}
+
+.button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #FFF;
+}
+
+.button_container.active .middle {
+    opacity: 0;
+    background: #FFF;
+}
+
+.button_container.active .bottom {
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #FFF;
+}
+
+.button_container span {
+    background: white;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+.projectb span {
+    background: black;
+}
+.button_container span:nth-of-type(2) {
+    top: 11px;
+}
+
+.button_container span:nth-of-type(3) {
+    top: 22px;
+}
+
+.overlay {
+    position: fixed;
+    background: url('images/bg4.gif');
+    background-size: 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+}
+
+.overlay.open {
+    z-index: 10;
+    opacity: 0.9;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.open li {
+    animation: fadeInRight .5s ease forwards;
+    animation-delay: .35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+    animation-delay: .4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+    animation-delay: .45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+    animation-delay: .50s;
+}
+
+.overlay nav {
+    display: flex;
+    position: relative;
+    height: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'montserrat', sans-serif;
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+.overlay ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+}
+
+.overlay ul li a {
+    display: block;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+    width: 100%;
+}
+
+.overlay ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #FFF;
+    transition: .35s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
