@@ -311,11 +311,11 @@ footer {
 }
 
 #project-title-ontwerpen2 {
-    background-image: url("images/projects/ontwerpen2_thumb.png");
+    background-image: url("images/ontwerpen2_bg.png");
 }
 
 #project-title-ontwerpen3 {
-    background-image: url("images/projects/ontwerpen3_thumb.png");
+    background-image: url("images/ontwerpen3_bg.png");
 }
 .overlay-image {
         object-fit: cover;
